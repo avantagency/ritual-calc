@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div class="inner-text-content">
+    <h1>Расчет цен на ритуальные услуги</h1>
+    <p>Ритуальные услуги, предоставляемые городской специализированной службой Ritual.ru, оказываются на основании
+        утвержденных правительством
+        Москвы стандартов и по доступным для всех категорий населения расценкам. Информирование граждан о положенных
+        льготах на городские ритуальные
+        услуги является одной из основных социальных функций, возложенных на нашу организацию.</p>
+
+    <div class="buttons">
+        <button class="button1">
+            <img src="http://ritual.ru/upload/iblock/eda/eda19ca5cf0b2f0ac435443ed728a331.png" alt="">
+            <span>Захоронение</span>
+
+        </button>
+        <button class="button2">
+            <img src="http://ritual.ru/upload/iblock/98d/98d16c6e173275f52741c045caf791c9.png" alt="">
+            <span>Кремация</span>
+        </button>
+    </div>
+
+    <div class="calculator">
+        <h2 class="calc-title">
+            Расчет цен на ритуальные услуги
+        </h2>
+        <div class="coffin">
+            <h6 class="coffin-title">
+                Гроб
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342">
+                        <span> Материал</span> <span> от  <span class="coffin-price" data-price="0">0руб.</span> </span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list coffinDP">
+                        <li class="coffin-list-item" data-price="6000">Деревянный, обитый тканью</li>
+                        <li class="coffin-list-item" data-price="14000">Комбинированный</li>
+                        <li class="coffin-list-item" data-price="16000">Лакированный</li>
+                        <li class="coffin-list-item" data-price="6000">Мусульманский шлифованный</li>
+                        <li class="coffin-list-item" data-price="18000">Мусульманский лакированный</li>
+                    </ul>
+
+                </div>
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342">
+                        <span> Композиция на крышку </span> <span> от <span class="coffin-price"> 0руб.</span> </span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="1">Выбор</li>
+                        <li class="coffin-list-item" data-price="34">опционален</li>
+                        <li class="coffin-list-item" data-price="3456">Тест текст</li>
+                    </ul>
+
+                </div>
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title">
+                        <span> Похоронный комплект</span> <span>от <span class="coffin-price" data-price="0"> 0руб.</span> </span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list funeralKit">
+                        <li class="coffin-list-item" data-price="1000">Шелковый /эконом/</li>
+                        <li class="coffin-list-item" data-price="3000">Парчовый /но сдесь только покрывало, подушка/
+                        </li>
+                        <li class="coffin-list-item" data-price="3500">Парчовый /но сдесь только покрывало, подушка/
+                        </li>
+                        <li class="coffin-list-item" data-price="5300">Элитный/Атлас постель, покрывало,подушка,
+                            тапочки/
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Венок
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342" style="justify-content: space-between">
+                        <span> Материал, размер</span> <span>от  <span class="coffin-price" data-price="0"> 0руб.</span> </span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list wreath">
+                        <li class="coffin-list-item" data-price="2750">Стандартный 110 см.</li>
+                        <li class="coffin-list-item" data-price="3500">Стандартный 140 см.</li>
+                        <li class="coffin-list-item" data-price="7300">Авторский 140 см. /Элит 140 см/</li>
+                        <li class="coffin-list-item" data-price="25000">Авторский из живых цветов 140 см.</li>
+                        <li class="coffin-list-item" data-price="5000">Корзина заказная</li>
+                    </ul>
+                    <div class="buttons-calc">
+                        <div class="plus">
+
+                        </div>
+                        <div class="minus">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Гирлянда
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title" data-name="342">
+                        от&nbsp; <span class="coffin-price" data-price="0">0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="3000">Контент дошлют</li>
+                        <li class="coffin-list-item" data-price="3000">текст</li>
+                        <li class="coffin-list-item" data-price="3000">текст</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin">
+            <h6 class="coffin-title">
+                Крест
+            </h6>
+            <div class="coffin-inputs crest">
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342">
+                        <span> Материал</span> <span> от <span class="coffin-price" data-price="0"> 0руб.</span></span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list coffinDP">
+                        <li class="coffin-list-item" data-price="10500">Дубовый 250 см.</li>
+                        <li class="coffin-list-item" data-price="5500">Сосновый 230 см.</li>
+                        <li class="coffin-list-item" data-price="2500">Металлический (160 см.)</li>
+                    </ul>
+
+                </div>
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342">
+                        <span> Табличка на крест</span> <span> от <span class="coffin-price" data-price="0"> 0руб.</span></span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="1500">Табличка на крест</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Ритуальный лифт
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title" data-name="342">
+                        от &nbsp; <span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="120000">Ритуальный лифт</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Доставка предметов ритуала
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title" data-name="342">
+                        от &nbsp;<span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="3000">Доставка предметов ритуала</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Перевозка к месту захоронения
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block">
+                    <div class="coffin-input-title" data-name="342">
+                        от &nbsp;<span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list wreath">
+                        <li class="coffin-list-item" data-price="9000">Газель (микроавтобус)</li>
+                        <li class="coffin-list-item" data-price="14000">Ford, Mercedes (микроавтобус)</li>
+                        <li class="coffin-list-item" data-price="36000">Mercedes, Lincoln, Cadillac (легковой) от 4-х
+                            часов
+                        </li>
+                    </ul>
+                    <div class="buttons-calc">
+                        <div class="plus">
+
+                        </div>
+                        <div class="minus">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Оформление заказа
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title" data-name="342">
+                        от &nbsp; <span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="3500">Контент дошлют</li>
+                        <li class="coffin-list-item" data-price="6500">Контент дошлют</li>
+                        <li class="coffin-list-item" data-price="14500">Контент дошлют</li>
+                        <li class="coffin-list-item" data-price="23500">Контент дошлют</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Похоронная бригада
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title">
+                        от &nbsp; <span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="10000">Стандартная (4 чел.)</li>
+                        <li class="coffin-list-item" data-price="25000">VIP (4 чел.)</li>
+                        <li class="coffin-list-item" data-price="35000">VIP (6 чел.)</li>
+                        <li class="coffin-list-item" data-price="100000">Элит</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="coffin calc-clone">
+            <h6 class="coffin-title">
+                Сопровождение похорон
+            </h6>
+            <div class="coffin-inputs">
+                <div class="coffin-input-block calc-one-input">
+                    <div class="coffin-input-title" data-name="342">
+                       от &nbsp; <span class="coffin-price" data-price="0"> 0руб.</span>
+                    </div>
+                    <div class="coffin-input">
+                        Не выбран
+                    </div>
+                    <ul class="coffin-list">
+                        <li class="coffin-list-item" data-price="6000">Распорядитель похорон</li>
+                        <li class="coffin-list-item" data-price="10000">Церемониймейстер</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="calcFooter">
+            <div class="issue">
+                Оформить заказ
+            </div>
+            <span class="itogo">Итого: <span class="allSumm"></span> </span>
+        </div>
+
+        <form action="#" class="hidden-form">
+
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+<script src="js/script.js"></script>
+</html>

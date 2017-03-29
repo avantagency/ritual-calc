@@ -1,0 +1,569 @@
+//Калькулятор
+//@import "variables"
+//@import "normalize"
+//
+////---------RITUAL CSS
+//body
+//  background: #f3f3f3
+//.inner-text-content
+//  background: #fefdfd
+//  height: 100%
+//  max-width: 1350px
+//  width: 90%
+//  margin: 6px auto 0px auto
+//  box-shadow: 0 0 10px rgba(0,0,0,.3)
+//  padding: 0 8%
+//  position: relative
+//  margin-top: 195px
+//  overflow-x: hidden
+//  margin-bottom: 5px
+//  padding-bottom: 100px
+//  font-family: 'Open Sans', sans-serif
+//  box-sizing: border-box
+//.inner-text-content h1
+//  font-family: 'Open Sans'
+//  color: #AD5A55
+//  text-align: center
+//  width: 100%
+//  position: relative
+//  font-size: 41.59px
+//  text-transform: uppercase
+//  padding-top: 40px
+//  font-weight: 700
+//  margin-bottom: 40px
+//.inner-text-content p
+//  font-size: 16px
+//  font-family: "Open Sans"
+//  color: #000
+//  line-height: 24px
+//  margin: 20px 0
+//  font-weight: 400
+//
+//.buttons
+//  text-align: center
+//  margin-top: 37px
+//
+//.buttons button.active
+//  border-style: solid
+//  border-width: 1px
+//  border-color: rgb(196, 196, 196)
+//  background: #FBFBFB
+//  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.1)
+//  opacity: 1.0
+//
+//
+//.buttons button
+//  cursor: pointer
+//  transition: 0.3s
+//  border-style: solid
+//  border-width: 1px
+//  border-color: rgb(196, 196, 196)
+//  background: #EAEAEA
+//  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.004)
+//  width: 200px
+//  height: 48px
+//  outline: none
+//
+//.buttons button.button2
+//  margin-left: -5px
+//  //добавил
+//  position: relative
+//  top: 5px
+//
+//.buttons button.button1 img
+//  margin-left: 18px
+//  margin-top: 11px
+//
+//.buttons button.button2 img
+//  margin-top: 9px
+//  margin-left: 29px
+//
+//.buttons button.button2 span
+//  width: 124px
+//
+//.buttons button.active img, .buttons button.active span
+//  opacity: 1.0
+//
+//
+//.buttons button span
+//  float: right
+//  font-size: 16px
+//  font-weight: bold
+//  font-family: "Arial"
+//  color: #ad5a55
+//  display: inline-block
+//  width: 135px
+//  text-align: left
+//  line-height: 48px
+//
+//.inner-text-content h2
+//  color: #ad5a55
+//  font-size: 22px
+//  font-weight: 900
+//  font-family: 'Open Sans', sans-serif
+//  text-transform: none
+//  text-align: left
+//
+//  //-------------------
+//
+//
+//
+//.calc-title
+//  margin-top: 55px
+//  padding-bottom: 25px
+//  border-bottom: 1px solid #acacac
+//.coffin
+//  padding: 16px 0 26px 0 //высота должна получиться 150
+//  width: 100%
+//  border-bottom: 1px solid #acacac
+//  &-title
+//    color: #ad5a55
+//    font-size: 16px
+//    font-weight: 900
+//    font-family: 'Open Sans', sans-serif
+//    margin-bottom: 23px
+//.coffin-inputs
+//  display: flex
+//  justify-content: space-between
+//  align-items: center
+//
+//.coffin-input-block
+//  width: 30% //347
+//
+//.calc-clone .coffin-inputs .coffin-input-block:first-child
+//  margin-bottom: 11px
+//
+//.coffin-input-title
+//  color: #7f7f7f
+//  font-weight: 800
+//  font-family: 'Open Sans', sans-serif
+//  font-size: 14px
+//  display: flex
+//  justify-content: space-between
+//  margin-bottom: 10px
+//  &.active
+//    color: #333333
+//.coffin-input-title span
+//  display: inline-block
+//.coffin-input
+//  height: 42px
+//  display: flex
+//  align-items: center
+//  padding: 0 30px 0 11px
+//  border: 1px solid #acacac
+//  background: url("../img/select-str.png") no-repeat 96% -24px
+//  color: #7f7f7f
+//  font-weight: 600
+//  font-size: 16px
+//  font-family: 'Open Sans', sans-serif
+//  &.deployed
+//    background: url("../img/select-str.png") no-repeat 96% 15px
+//
+//
+//
+//
+//  &.active
+//    color: #333333
+//.coffin-list
+//  box-shadow: 0 3px 20px #646361
+//  display: none
+//  position: absolute
+//  width: 24.7%
+//  max-width: 305px
+//  background: #ffffff
+//  z-index: 999
+//.coffin-list-item
+//  display: flex
+//  align-items: center
+//  height: 42px
+//  padding: 0 11px
+//  font-weight: 400
+//  font-size: 16px
+//  font-family: 'Open Sans', sans-serif
+//  color: #ad5a55
+//  transition: .3s ease
+//  cursor: pointer
+//  &:hover
+//    background: #f5f3ee
+//.crest
+//  justify-content: flex-start
+//.crest .coffin-input-block
+//  margin-right: 50px
+////.hidden-form
+////  display: none
+//.calc-clone .coffin-inputs
+//  display: block
+//.buttons-calc
+//  position: relative
+//  left: 100%
+//  bottom: 42px
+//  display: flex
+//  margin-bottom: -31px
+//  margin-left: 18px
+//  width: 90px
+//  justify-content: space-between
+//.plus
+//  width: 42px
+//  height: 42px
+//  background: #ad5a55 url("../img/plus.png") center center no-repeat
+//  border-radius: 8px
+//
+//.minus
+//  width: 42px
+//  height: 42px
+//  background: #d0d0d0 url("../img/minus.png") center center no-repeat
+//  border-radius: 8px
+//  display: none
+//
+//.calcFooter
+//  display: flex
+//  justify-content: space-between
+//  align-items: center
+//  margin: 20px 0 75px 0
+//
+//
+//.issue
+//  color: #ffffff
+//  background: #ad5a55
+//  text-transform: uppercase
+//  padding: 20px 40px
+//  cursor: pointer
+//  border-radius: 8px
+//.itogo
+//  color: #ad5a55
+//  font-size: 22px
+//  font-weight: 900
+//.calc-clone .coffin-input-title
+//  justify-content: flex-end
+//
+//@media all and (max-width: 1000px)
+//    .coffin-input-title
+//      height: 30px
+//@media all and (max-width: 800px)
+//  .coffin-inputs
+//    display: block
+//  .coffin-input-block
+//    width: 81%
+//    margin-bottom: 20px
+//  .coffin-input-title
+//    height: auto
+//  .calc-clone .coffin-inputs .coffin-input-block:first-child
+//    margin-bottom: 30px
+//  .coffin-list
+//    width: 66.7%
+//    max-width: 1000px
+//
+//@media all and (max-width: 600px)
+//  .coffin-input
+//    height: 35px
+//    font-size: 12px
+//  .calc-clone .coffin-input-block
+//    &:not(.calc-one-input)
+//      width: 77%
+//  .coffin-input-block
+//    width: 100%
+//    margin-bottom: 20px
+//  .calc-clone .coffin-list
+//    &:not(.calc-one-input)
+//      width: 77%
+//  .coffin-list
+//    width: 82%
+//    word-wrap: break-word
+//  .buttons-calc
+//    bottom: 35px
+//    width: 68px
+//    margin-left: 4px
+//  .plus, .minus
+//    width: 35px
+//    height: 35px
+//    transform: scale(0.75)
+//  .calcFooter
+//    flex-direction: column
+//  .itogo
+//    display: flex !important
+//    justify-content: space-between
+//    width: 100%
+//    margin-top: 10px
+//    padding: 0 1%
+//    font-size: 20px
+//  .calcFooter span
+//    display: block
+//  .buttons button.button2
+//    margin-left: 0
+//  .coffin-list-item
+//    font-size: 13px
+//  .inner-text-content h1
+//    font-size: 30px
+//  .calc-one-input ul
+//    width: 82% !important
+//  .coffin-input-title
+//    font-size: 13px
+//    font-weight: 700
+//  .coffin-input-title span
+//    max-width: 85%
+//  .issue
+//    padding: 0
+//    width: 100%
+//    height: 40px
+//    display: flex
+//    align-items: center
+//    justify-content: center
+//  .coffin
+//    padding: 10px 0 0 0
+//  .calc-clone .coffin-inputs .coffin-input-block:first-child
+//    margin-bottom: 20px
+//  .coffin-title
+//    margin-bottom: 14px
+//    font-size: 15px
+//    font-weight: 700
+//
+//
+//@media all and (max-width: 350px)
+//  .coffin-input
+//    height: 35px
+//    font-size: 11px
+
+//Форма
+$base-color: #ad5a55
+body
+  font-family: 'Open Sans'
+*
+  padding: 0
+  margin: 0
+  border: 0
+  outline: none !important
+.ovHid
+  overflow: hidden !important
+.catted-buttonAll
+  text-align: center
+  color: #ad5a55
+  font-size: 16px
+  font-weight: 600
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  font-family: 'Open Sans', sans-serif
+  &:before
+    content: ''
+    width: 45%
+    height: 2px
+    border-bottom: 1px dashed rgba(0,0,0,.2)
+    position: absolute
+    left: -1%
+    top: 45%
+  &:after
+    content: ''
+    width: 45%
+    height: 2px
+    border-bottom: 1px dashed rgba(0,0,0,.2)
+    position: absolute
+    right: -1%
+    top: 45%
+.catted-contentAll
+  display: none
+.responseBtn
+  font-size: 14px
+  color: #ffffff
+  text-decoration: none
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: 'Open Sans'
+  background-color: #ad5a55
+  width: 251px
+  height: 47px
+  text-transform: uppercase
+  transition: 0.3s
+  font-weight: 700
+  margin: 10px auto 30px auto
+  border-radius: 8px
+  cursor: pointer
+  &:hover
+    background: #814340
+.form-vac
+  width: 100vw
+  height: 100vh
+  display: none
+  z-index: 9999
+  position: absolute
+  top: 0
+  left: 0
+  &.active
+    display: block
+
+
+
+.form-vacOverlay
+  background: rgba(0, 0, 0, 0.561)
+  width: 100%
+  height: 100%
+  z-index: -1
+.form-vacInner
+  position: absolute
+  top: 50%
+  left: 50%
+  height: 700px
+  width: 430px
+  transform: translateX(-50%) translateY(-50%)
+  z-index: 10000
+  box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.47)
+  background: #ffffff
+  padding: 0 2%
+  &-title
+    color: #000
+    font-size: 24px
+    font-family: 'Open Sans', sans-serif
+    text-transform: none
+    text-align: center
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 10px
+    font-weight: 700
+.form-vacInner-name
+  width: 100%
+  font-size: 21px
+  text-align: center
+  color: $base-color
+  font-weight: 900
+  margin-bottom: 10px
+
+
+.close-vac
+  width: 21px
+  height: 21px
+  background: url("http://ritual.imshost.ru/images/closed.png") center center
+  position: absolute
+  right: 10px
+  top: 10px
+  cursor: pointer
+.form-vac-resp
+  text-align: center
+.form-vacForm, .form-vacLabel
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+.form-vacInput
+  box-sizing: border-box
+  outline: none
+  border-width: 1px
+  border-color: rgba(0, 0, 0,0.2)
+  border-style: solid
+  padding: 0 15px
+  width: 100%
+  height: 45px
+  margin: auto
+
+
+.form-vacLabel
+  margin-top: 15px
+
+.form-vacLabel span
+  font-size: 11px
+  color: #ad5a55
+  display: block
+  text-align: left
+  margin-bottom: 5px
+.form-vacLabel span span
+  display: inline
+  color: #929292
+
+.file-input
+  display: none !important
+.file_upload
+  display: block
+  position: relative
+
+.file_upload .button, .file_upload > mark
+  display: block
+  cursor: pointer
+
+.file_upload > mark
+  display: none !important
+
+.file_upload .button
+  width: 100%
+
+.file_upload input[type=file]
+  position: absolute
+  top: 0
+  opacity: 0
+
+.file_upload .button
+  background: $base-color
+  transition: background 0.3s
+  border-radius: 8px
+  color: #fff
+  overflow: hidden !important
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 16px
+  height: 47px
+  &:hover
+    background: #814340
+.form-vacCaptcha
+  width: 100%
+  height: 80px
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid #00f
+  margin-top: 20px
+mark
+  background: transparent !important
+  opacity: 0 !important
+  visibility: hidden !important
+.form-vacSubmitBtn
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 47px
+  margin-top: 20px
+  background: $base-color
+  color: #ffffff
+  transition: .3s
+  border-radius: 8px
+  cursor: pointer
+  &:hover
+    background: #814340
+
+@media all and (max-width: 1024px)
+  .form-vacInner
+    width: 400px
+
+@media all and (max-width: 800px)
+  .form-vacInner
+    width: 325px
+    height: 600px
+  .form-vacInput
+    height: 35px
+  .form-vacLabel
+    margin-top: 7px
+  .form-vac-resp
+    display: none
+  .file_upload .button, .form-vacSubmitBtn
+    height: 42px
+@media all and (max-width: 350px)
+  .form-vacInner
+    width: 300px
+    height: 500px
+  .form-vacInput
+    height: 35px
+  .form-vacLabel
+    margin-top: 7px
+  .form-vac-resp
+    display: none
+  .file_upload .button, .form-vacSubmitBtn
+    height: 42px
+  .form-vacInner-title
+    margin-top: 0
+  .form-vacCaptcha
+    margin-top: 7px
+    height: 60px
+  .form-vacInner-name
+    margin-bottom: 0
+    font-size: 16px
+

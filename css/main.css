@@ -1,0 +1,343 @@
+body {
+  font-family: 'Open Sans'; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none !important; }
+
+.ovHid {
+  overflow: hidden !important; }
+
+.catted-buttonAll {
+  text-align: center;
+  color: #ad5a55;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-family: 'Open Sans', sans-serif; }
+  .catted-buttonAll:before {
+    content: '';
+    width: 45%;
+    height: 2px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: -1%;
+    top: 45%; }
+  .catted-buttonAll:after {
+    content: '';
+    width: 45%;
+    height: 2px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: -1%;
+    top: 45%; }
+
+.catted-contentAll {
+  display: none; }
+
+.responseBtn {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: 'Open Sans';
+  background-color: #ad5a55;
+  width: 251px;
+  height: 47px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 700;
+  margin: 10px auto 30px auto;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer; }
+  .responseBtn:hover {
+    background: #814340; }
+
+.form-vac {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .form-vac.active {
+    display: block; }
+
+.form-vacOverlay {
+  background: rgba(0, 0, 0, 0.561);
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.form-vacInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 700px;
+  width: 430px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10000;
+  -webkit-box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.47);
+  box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.47);
+  background: #ffffff;
+  padding: 0 2%; }
+  .form-vacInner-title {
+    color: #000;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700; }
+
+.form-vacInner-name {
+  width: 100%;
+  font-size: 21px;
+  text-align: center;
+  color: #ad5a55;
+  font-weight: 900;
+  margin-bottom: 10px; }
+
+.close-vac {
+  width: 21px;
+  height: 21px;
+  background: url("http://ritual.imshost.ru/images/closed.png") center center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer; }
+
+.form-vac-resp {
+  text-align: center; }
+
+.form-vacForm, .form-vacLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.form-vacInput {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  padding: 0 15px;
+  width: 100%;
+  height: 45px;
+  margin: auto; }
+
+.form-vacLabel {
+  margin-top: 15px; }
+
+.form-vacLabel span {
+  font-size: 11px;
+  color: #ad5a55;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px; }
+
+.form-vacLabel span span {
+  display: inline;
+  color: #929292; }
+
+.file-input {
+  display: none !important; }
+
+.file_upload {
+  display: block;
+  position: relative; }
+
+.file_upload .button, .file_upload > mark {
+  display: block;
+  cursor: pointer; }
+
+.file_upload > mark {
+  display: none !important; }
+
+.file_upload .button {
+  width: 100%; }
+
+.file_upload input[type=file] {
+  position: absolute;
+  top: 0;
+  opacity: 0; }
+
+.file_upload .button {
+  background: #ad5a55;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #fff;
+  overflow: hidden !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  height: 47px; }
+  .file_upload .button:hover {
+    background: #814340; }
+
+.form-vacCaptcha {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #00f;
+  margin-top: 20px; }
+
+mark {
+  background: transparent !important;
+  opacity: 0 !important;
+  visibility: hidden !important; }
+
+.form-vacSubmitBtn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 47px;
+  margin-top: 20px;
+  background: #ad5a55;
+  color: #ffffff;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer; }
+  .form-vacSubmitBtn:hover {
+    background: #814340; }
+
+@media all and (max-width: 1024px) {
+  .form-vacInner {
+    width: 400px; } }
+
+@media all and (max-width: 800px) {
+  .form-vacInner {
+    width: 325px;
+    height: 600px; }
+  .form-vacInput {
+    height: 35px; }
+  .form-vacLabel {
+    margin-top: 7px; }
+  .form-vac-resp {
+    display: none; }
+  .file_upload .button, .form-vacSubmitBtn {
+    height: 42px; } }
+
+@media all and (max-width: 350px) {
+  .form-vacInner {
+    width: 300px;
+    height: 500px; }
+  .form-vacInput {
+    height: 35px; }
+  .form-vacLabel {
+    margin-top: 7px; }
+  .form-vac-resp {
+    display: none; }
+  .file_upload .button, .form-vacSubmitBtn {
+    height: 42px; }
+  .form-vacInner-title {
+    margin-top: 0; }
+  .form-vacCaptcha {
+    margin-top: 7px;
+    height: 60px; }
+  .form-vacInner-name {
+    margin-bottom: 0;
+    font-size: 16px; } }
+
